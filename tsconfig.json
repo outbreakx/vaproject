@@ -26,5 +26,6 @@
       "@useCases/*": ["useCases/*"],
 			"@utils/*": ["utils/*"]
     }
-	}
+	},
+	"exclude": ["node_modules", "__tests__"]
 }
