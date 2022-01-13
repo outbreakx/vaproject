@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r dotenv/config build/server.js",
+    "start": "npm run build && node -r dotenv/config build/server.js",
     "start:dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "build": "rimraf build && tsc --project tsconfig.json && tsc-alias -p tsconfig.json"
   },
