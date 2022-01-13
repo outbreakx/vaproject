@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import { ListCarUseCase } from "./ListCarUseCase";
-
+import { ListCarRequestDTO } from "./ListCarDTO";
 
 export class ListCarController {
 	constructor(private listCarUseCase: ListCarUseCase) { }
 
-	async handle(request: Request, response: Response): Promise<Response> {
+	async handle(request: Request<{}, {}, {}, ListCarRequestDTO>, response: Response): Promise<Response> {
 		const {
 			brand,
 			model,
@@ -14,7 +14,11 @@ export class ListCarController {
 			mileage,
 			shiftType,
 			sellPrice,
-		} = request.body;
+			startRangeYear,
+			endRangeYear,
+			startRangePrice,
+			endRangePrice
+		} = request.query;
 
 		try {
 			const data = await this.listCarUseCase.execute({
@@ -24,7 +28,11 @@ export class ListCarController {
 				year,
 				mileage,
 				shiftType,
-				sellPrice
+				sellPrice,
+				startRangeYear,
+				endRangeYear,
+				startRangePrice,
+				endRangePrice
 			});
 
 			return response.status(200).json({

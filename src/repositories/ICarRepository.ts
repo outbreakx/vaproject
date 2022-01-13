@@ -9,6 +9,11 @@ export interface ICarParams {
 	mileage?: number;
 	shiftType?: string;
 	sellPrice?: number;
+
+	startRangeYear?: number;
+	endRangeYear?: number;
+	startRangePrice?: number;
+	endRangePrice?: number;
 }
 
 
