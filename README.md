@@ -6,7 +6,7 @@ You must have node installed and also have a mongodb database.
 
 ### Instalation
 1. git clone https://github.com/Bufige/carupi
-2.  Install NPM packages
+2. Install NPM packages
 ```
 npm install
 ```
@@ -17,3 +17,5 @@ npm install
 npm run start
 ```
 
+### API documentation
+[Postman collection](/postman/carupi.postman_collection.json)

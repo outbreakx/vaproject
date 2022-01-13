@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "6287da23-150f-46e5-981c-5ad81568cb17",
+		"name": "carupi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_URL}}/api/cars?startRangePrice=50000&endRangePrice=70000",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "brand 1",
+							"disabled": true
+						},
+						{
+							"key": "model",
+							"value": "model 1",
+							"disabled": true
+						},
+						{
+							"key": "version",
+							"value": " 1,",
+							"disabled": true
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"disabled": true
+						},
+						{
+							"key": "shiftType",
+							"value": "manual",
+							"disabled": true
+						},
+						{
+							"key": "sellPrice",
+							"value": "70000",
+							"disabled": true
+						},
+						{
+							"key": "startRangeYear",
+							"value": "2020",
+							"disabled": true
+						},
+						{
+							"key": "endRangeYear",
+							"value": "2019",
+							"disabled": true
+						},
+						{
+							"key": "startRangePrice",
+							"value": "50000"
+						},
+						{
+							"key": "endRangePrice",
+							"value": "70000"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list cars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/cars?startRangePrice=50000&endRangePrice=70000",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							],
+							"query": [
+								{
+									"key": "brand",
+									"value": "brand 1",
+									"disabled": true
+								},
+								{
+									"key": "model",
+									"value": "model 1",
+									"disabled": true
+								},
+								{
+									"key": "version",
+									"value": " 1,",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "2020",
+									"disabled": true
+								},
+								{
+									"key": "shiftType",
+									"value": "manual",
+									"disabled": true
+								},
+								{
+									"key": "sellPrice",
+									"value": "70000",
+									"disabled": true
+								},
+								{
+									"key": "startRangeYear",
+									"value": "2020",
+									"disabled": true
+								},
+								{
+									"key": "endRangeYear",
+									"value": "2019",
+									"disabled": true
+								},
+								{
+									"key": "startRangePrice",
+									"value": "50000"
+								},
+								{
+									"key": "endRangePrice",
+									"value": "70000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "450"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c2-4rPUVN0re+xqz0poohC/GcedQe4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jan 2022 19:43:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"_id\": \"61e04f4d3a3912455e5cf38e\",\n            \"brand\": \"brand 1\",\n            \"model\": \"model 1\",\n            \"version\": 1,\n            \"year\": 2020,\n            \"shiftType\": \"manual\",\n            \"sellPrice\": 70000,\n            \"createdAt\": \"2022-01-13T16:11:57.417Z\",\n            \"updatedAt\": \"2022-01-13T16:12:24.317Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61e079322b5e3f6a3f2ebf13\",\n            \"brand\": \"brand 2\",\n            \"model\": \"model 2\",\n            \"version\": 1,\n            \"year\": 2021,\n            \"shiftType\": \"manual\",\n            \"sellPrice\": 60000,\n            \"createdAt\": \"2022-01-13T19:10:42.524Z\",\n            \"updatedAt\": \"2022-01-13T19:10:42.524Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_URL}}/api/cars/{{CAR_ID}}",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"cars",
+						"{{CAR_ID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get car",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/cars/{{CAR_ID}}",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"{{CAR_ID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e4-9tpTBRFr5R2hZ9TXes59x2u2g8s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jan 2022 19:43:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"_id\": \"61e079442b5e3f6a3f2ebf15\",\n        \"brand\": \"brand 3\",\n        \"model\": \"model 3\",\n        \"version\": 1,\n        \"year\": 2010,\n        \"shiftType\": \"manual\",\n        \"sellPrice\": 80000,\n        \"createdAt\": \"2022-01-13T19:11:00.633Z\",\n        \"updatedAt\": \"2022-01-13T19:22:44.940Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "create car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"brand 5\",\r\n    \"model\": \"model 5\",\r\n    \"version\": \"2.0\",\r\n    \"year\": \"2022\",\r\n    \"mileague\": \"0\",\r\n    \"shiftType\": \"manual\",\r\n    \"sellPrice\": 150000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/cars",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create car",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\": \"brand 5\",\r\n    \"model\": \"model 5\",\r\n    \"version\": \"2.0\",\r\n    \"year\": \"2022\",\r\n    \"mileague\": \"0\",\r\n    \"shiftType\": \"manual\",\r\n    \"sellPrice\": 150000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/cars",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "229"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e5-y4x7jA4tz9AuRzGKVdDsrz1v0Ew\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jan 2022 19:43:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"brand\": \"brand 5\",\n        \"model\": \"model 5\",\n        \"version\": 2,\n        \"year\": 2022,\n        \"shiftType\": \"manual\",\n        \"sellPrice\": 150000,\n        \"_id\": \"61e080f98cb4740c7ac62f7d\",\n        \"createdAt\": \"2022-01-13T19:43:53.653Z\",\n        \"updatedAt\": \"2022-01-13T19:43:53.653Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sellPrice\": 80000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/cars/{{CAR_ID}}",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"cars",
+						"{{CAR_ID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update car",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sellPrice\": 80000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/cars/{{CAR_ID}}",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"{{CAR_ID}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e4-MgjjD+3L15/XEVDvuOyo52tQCjw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jan 2022 19:44:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"_id\": \"61e079442b5e3f6a3f2ebf15\",\n        \"brand\": \"brand 3\",\n        \"model\": \"model 3\",\n        \"version\": 1,\n        \"year\": 2010,\n        \"shiftType\": \"manual\",\n        \"sellPrice\": 80000,\n        \"createdAt\": \"2022-01-13T19:11:00.633Z\",\n        \"updatedAt\": \"2022-01-13T19:44:01.477Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/cars/{{CAR_ID}}",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"cars",
+						"{{CAR_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
