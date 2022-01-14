@@ -1,4 +1,3 @@
-// import { mongoConnection } from "@repositories/implementations/MongoDb/MongoDbConnection";
 import request from "supertest";
 import { mongoConnection } from "@repositories/implementations/MongoDb/MongoDbConnection";
 
@@ -38,8 +37,6 @@ describe("ROUTES CARS", () => {
 
 
 afterAll(done => {
-	//mongoose.connection.db.dropDatabase();
-
 	mongoose.connection.close();
 	Server.close();
 	done();

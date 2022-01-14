@@ -9,9 +9,9 @@ const folders = getDirectories(folder);
 
 const router = Router();
 
-for (const folder of folders) {
-	const lastItem = folder.substring(folder.lastIndexOf('/') + 1);
-	const APIROUTES = getRoutesFromPath(folder);
+for (const cFolder of folders) {
+	const lastItem = cFolder.substring(cFolder.lastIndexOf('/') + 1);
+	const APIROUTES = getRoutesFromPath(cFolder);
 
 	const currentRouter = Router();
 

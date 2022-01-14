@@ -1,5 +1,6 @@
 node_modules
 dist
 build
+.scannerwork
 .env
 package-lock.json

@@ -1,5 +1,4 @@
 import express from "express";
-import { mongoConnection } from "./repositories/implementations/MongoDb/MongoDbConnection";
 import Routes from "./routes";
 
 

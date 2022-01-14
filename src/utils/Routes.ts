@@ -25,45 +25,53 @@ export function getRoutesFromPath(path: string) {
 	});
 }
 
+
 export function setRouteByType(router, route, routePath) {
-	if (route.type === 'post') {
-		if (route.middleware) {
-			router.post(routePath + route.name, route.middleware, route.handle);
+	switch (route.type) {
+		case 'post': {
+			if (route.middleware) {
+				router.post(routePath + route.name, route.middleware, route.handle);
+			}
+			else {
+				router.post(routePath + route.name, route.handle);
+			}
+			break;
 		}
-		else {
-			router.post(routePath + route.name, route.handle);
+		case 'get': {
+			if (route.middleware) {
+				router.get(routePath + route.name, route.middleware, route.handle);
+			}
+			else {
+				router.get(routePath + route.name, route.handle);
+			}
+			break;
 		}
-	}
-	else if (route.type === 'get') {
-		if (route.middleware) {
-			router.get(routePath + route.name, route.middleware, route.handle);
+		case 'put': {
+			if (route.middleware) {
+				router.put(routePath + route.name, route.middleware, route.handle);
+			}
+			else {
+				router.put(routePath + route.name, route.handle);
+			}
+			break;
 		}
-		else {
-			router.get(routePath + route.name, route.handle);
+		case 'patch': {
+			if (route.middleware) {
+				router.patch(routePath + route.name, route.middleware, route.handle);
+			}
+			else {
+				router.patch(routePath + route.name, route.handle);
+			}
+			break;
 		}
-	}
-	else if (route.type === 'put') {
-		if (route.middleware) {
-			router.put(routePath + route.name, route.middleware, route.handle);
-		}
-		else {
-			router.put(routePath + route.name, route.handle);
-		}
-	}
-	else if (route.type === 'patch') {
-		if (route.middleware) {
-			router.patch(routePath + route.name, route.middleware, route.handle);
-		}
-		else {
-			router.patch(routePath + route.name, route.handle);
-		}
-	}
-	else if (route.type === 'delete') {
-		if (route.middleware) {
-			router.delete(routePath + route.name, route.middleware, route.handle);
-		}
-		else {
-			router.delete(routePath + route.name, route.handle);
+		case 'delete': {
+			if (route.middleware) {
+				router.delete(routePath + route.name, route.middleware, route.handle);
+			}
+			else {
+				router.delete(routePath + route.name, route.handle);
+			}
+			break;
 		}
 	}
 }

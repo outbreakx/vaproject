@@ -1,4 +1,3 @@
-import { Car } from "@entities/Car";
 import { ICarRepository } from "@repositories/ICarRepository";
 
 import { UpdateCarRequestDTO } from "./UpdateCarDTO";

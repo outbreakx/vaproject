@@ -12,13 +12,12 @@ export class MongoDbCarRepository implements ICarRepository {
 	async update(params: ICarParams): Promise<Car> {
 		const id = params.id;
 		delete params.id;
-		const existsCar = await CarModel.findOneAndUpdate({
+		return CarModel.findOneAndUpdate({
 			_id: id
 		},
 			params, {
 			new: true
 		}).exec();
-		return existsCar;
 	}
 
 	async list(params?: ICarParams): Promise<Car[] | LeanDocument<Car>[]> {
@@ -39,7 +38,7 @@ export class MongoDbCarRepository implements ICarRepository {
 				$lte: params.endRangeYear
 			};
 		}
-		
+
 		if (params.startRangePrice && params.endRangePrice) {
 			newParams['sellPrice'] = {
 				$gte: params.startRangePrice,
@@ -56,7 +55,7 @@ export class MongoDbCarRepository implements ICarRepository {
 				$lte: params.endRangePrice
 			};
 		}
-		
+
 		return CarModel.find(newParams).lean().exec();
 	}
 
@@ -65,6 +64,6 @@ export class MongoDbCarRepository implements ICarRepository {
 	}
 
 	async delete(params: ICarParams): Promise<boolean> {
-		return (await CarModel.findOneAndDelete({ _id: params.id }).exec()) ? true : false;;
+		return (await CarModel.findOneAndDelete({ _id: params.id }).exec()) ? true : false;
 	}
 }
