@@ -1,4 +1,4 @@
-# TEST - CARUPI BACKEND
+# TEST - BACKEND
 
 ## Getting Started
 
