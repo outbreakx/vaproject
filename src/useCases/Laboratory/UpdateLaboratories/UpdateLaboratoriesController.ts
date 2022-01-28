@@ -50,7 +50,6 @@ export class UpdateLaboratoriesController {
 			});
 		}
 		catch (err) {
-			console.log(err);
 			return response.status(400).json({
 				error: {
 					code: 400,

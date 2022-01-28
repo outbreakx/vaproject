@@ -8,7 +8,6 @@ export class PostGresExamRepository implements IExamRepository {
 	async save(exam: Exam): Promise<Exam> {
 		const repository = await getManager().getRepository(Exam);
 		let tmp = { ...exam } as any;
-		console.log("tmo:", tmp);
 		if (exam.laboratories) {	
 
 			tmp['laboratories'] = exam.laboratories.map(laboratory => {
@@ -17,7 +16,6 @@ export class PostGresExamRepository implements IExamRepository {
 				}
 			});
 		}
-		console.log("tmp", tmp);
 		return repository.save(tmp);
 	}
 
@@ -61,7 +59,6 @@ export class PostGresExamRepository implements IExamRepository {
 		return (await Exam.delete(params.id as number)).affected > 0;
 	}
 	async deleteMany(ids: number[]): Promise<boolean> {
-		console.log("ids:", ids);
 		return (await Exam.delete(ids)).affected > 0;
 	}
 }

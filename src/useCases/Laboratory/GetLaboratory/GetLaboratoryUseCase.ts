@@ -6,6 +6,10 @@ export class GetLaboratoryUseCase {
 	constructor(private LaboratoryRepository: ILaboratoryRepository) { }
 
 	async execute(data: GetLaboratoryRequestDTO) {
-		return this.LaboratoryRepository.get(data);
+		const item = await this.LaboratoryRepository.get(data);
+		if(!item) {
+			throw new Error("Laboratory not found");
+		}
+		return item;
 	}
 }

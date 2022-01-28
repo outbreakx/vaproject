@@ -6,6 +6,10 @@ export class GetExamUseCase {
 	constructor(private examRepository: IExamRepository) { }
 
 	async execute(data: GetExamRequestDTO) {
-		return this.examRepository.get(data);
+		const item = await this.examRepository.get(data);
+		if(!item) {
+			throw new Error("Exam not found");
+		}
+		return item;
 	}
 }

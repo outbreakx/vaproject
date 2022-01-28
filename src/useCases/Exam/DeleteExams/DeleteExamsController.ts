@@ -8,7 +8,6 @@ export class DeleteExamsController {
 	async handle(request: Request, response: Response): Promise<Response> {
 		try {
 			const isArray = Array.isArray(request.body);
-			console.log(request.body)
 			if (!isArray) {
 				throw new Error("Bulk request must be an array.");
 			}
