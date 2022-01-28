@@ -37,5 +37,8 @@
     "ts-jest": "^27.1.2",
     "tsc-alias": "^1.5.0",
     "tsconfig-paths": "^3.12.0"
+  },
+	"engines": {
+    "node": "17.4.0"
   }
 }
