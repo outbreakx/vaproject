@@ -7,7 +7,7 @@ import {
 	UpdateDateColumn,
 	CreateDateColumn,
 	ManyToMany,
-} from 'typeorm'
+} from 'typeorm';
 
 import Laboratory from '@entities/Laboratory';
 
