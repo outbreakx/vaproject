@@ -4,10 +4,10 @@ dotenv.config({
 	path: process.env.NODE_ENV === "development" ? ".env" : ".env.production"
 });
 
-import { mongoConnection } from "@repositories/implementations/MongoDb/MongoDbConnection";
+import { mysqlConnection } from "@repositories/implementations/Postgres/PostgresDbConnection";
 
 if (process.env.NODE_ENV != 'test') {
-	mongoConnection(process.env.MONGO_COLLECTION);
+	mysqlConnection();
 }
 
 
