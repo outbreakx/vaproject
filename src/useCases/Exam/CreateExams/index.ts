@@ -5,10 +5,10 @@ import { CreateExamsController } from "./CreateExamsController";
 import { CreateExamsUseCase } from "./CreateExamsUseCase";
 
 
-const mongoDbExamRepository = new PostGresExamRepository();
-const mongoDbLaboratoryRepository = new PostGresLaboratoryRepository();
+const postGresExamRepository = new PostGresExamRepository();
+const postGresLaboratoryRepository = new PostGresLaboratoryRepository();
 
-const createExamsUseCase = new CreateExamsUseCase(mongoDbExamRepository, mongoDbLaboratoryRepository);
+const createExamsUseCase = new CreateExamsUseCase(postGresExamRepository, postGresLaboratoryRepository);
 const createExamsController = new CreateExamsController(createExamsUseCase);
 
 export { createExamsUseCase, createExamsController };

@@ -4,9 +4,9 @@ import { CreateExamController } from "./CreateExamController";
 import { CreateExamUseCase } from "./CreateExamUseCase";
 
 
-const mongoDbExamRepository = new PostGresExamRepository();
+const postGresExamRepository = new PostGresExamRepository();
 
-const createExamUseCase = new CreateExamUseCase(mongoDbExamRepository);
+const createExamUseCase = new CreateExamUseCase(postGresExamRepository);
 const createExamController = new CreateExamController(createExamUseCase);
 
 export { createExamUseCase, createExamController };

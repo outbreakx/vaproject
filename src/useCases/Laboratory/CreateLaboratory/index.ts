@@ -4,9 +4,9 @@ import { CreateLaboratoryController } from "./CreateLaboratoryController";
 import { CreateLaboratoryUseCase } from "./CreateLaboratoryUseCase";
 
 
-const mongoDbLaboratoryRepository = new PostGresLaboratoryRepository();
+const postGresLaboratoryRepository = new PostGresLaboratoryRepository();
 
-const createLaboratoryUseCase = new CreateLaboratoryUseCase(mongoDbLaboratoryRepository);
+const createLaboratoryUseCase = new CreateLaboratoryUseCase(postGresLaboratoryRepository);
 const createLaboratoryController = new CreateLaboratoryController(createLaboratoryUseCase);
 
 export { createLaboratoryUseCase, createLaboratoryController };
